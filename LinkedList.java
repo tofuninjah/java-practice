@@ -1,11 +1,13 @@
 import java.util.*;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 /**
- * Java Collection: 22 ArrayList Exercises
+ * Java Collection: 22 LinkList Exercises
  */
 class LinkedListDemo {
     public static void main(String args[]) {
-        List<String> aLinkedList = new LinkedList<>();
+        LinkedList<String> aLinkedList = new LinkedList<>();
         aLinkedList.add("default-a");
         aLinkedList.add("default-b");
         aLinkedList.add("default-c");
@@ -31,39 +33,75 @@ class LinkedListDemo {
          * 3. Iterate through all elements in a linked list starting at the specified
          * position.
          */
+        Iterator iterator = aLinkedList.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.printf("Iterating... %s | ", iterator.next());
+        }
+        System.out.printf("%n");
 
         /**
          * 4. Iterate a linked list in reverse order.
          */
+        Iterator listIterator = aLinkedList.descendingIterator();
+
+        while (listIterator.hasNext()) {
+            System.out.println(listIterator.next());
+        }
 
         /**
          * 5. Insert the specified element at the specified position in the linked list.
          */
+        String el = "Specific Element";
+        aLinkedList.add(0, el);
+        System.out.println(aLinkedList);
 
         /**
          * 6. Insert elements into the linked list at the first and last position.
          */
+        aLinkedList.addFirst("veryFirst");
+        aLinkedList.addLast("veryLast");
+        System.out.println(aLinkedList);
 
         /**
-         * 7. Insert the specified element at the front of a linked list.
+         * 7. Insert the specified element at the front of a linked list. The difference
+         * is what happens when the addition fails, due to a queue capacity restriction:
+         * .addFirst() throws an (unchecked) exception, .offerFirst() returns false.
          */
+        aLinkedList.offerFirst("aVeryOfferFirst");
+        System.out.println(aLinkedList);
 
         /**
          * 8. Insert the specified element at the end of a linked list.
          */
+        aLinkedList.offerLast("averyOfferLast");
+        System.out.println(aLinkedList);
 
         /**
          * 9. Insert some elements at the specified position into a linked list.
          */
+        LinkedList<String> newElements = new LinkedList<>();
+        newElements.add("newEl1");
+        newElements.add("newEl2");
+        aLinkedList.addAll(4, newElements);
+        System.out.println(aLinkedList);
 
         /**
          * 10. get the first and last occurrence of the specified elements in a linked
          * list.
          */
+        String firstEl = aLinkedList.getFirst();
+        String lastEl = aLinkedList.getLast();
+        System.out.printf("First index: %s%n", firstEl);
+        System.out.printf("Last index: %s%n", lastEl);
 
         /**
          * 11. display the elements and their positions in a linked list.
          */
+        for (int i = 0; i < aLinkedList.size(); i++) {
+            System.out.println(i);
+            System.out.println(aLinkedList.get(i));
+        }
 
         /**
          * 12. remove a specified element from a linked list.
@@ -127,3 +165,4 @@ class LinkedListDemo {
 
     }
 }
+
