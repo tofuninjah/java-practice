@@ -1,7 +1,5 @@
 import java.util.*;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 /**
  * Java Collection: 22 LinkList Exercises
  */
@@ -229,8 +227,8 @@ class LinkedListDemo {
         /**
          * 25. Test an linked list is empty or not.
          */
-		System.out.printf("Shouldn't be empty (false): %s%n",aLinkedList.isEmpty());
-		System.out.printf("Should be empty (true): %s%n", removeEverything.isEmpty());
+	System.out.printf("Shouldn't be empty (false): %s%n",aLinkedList.isEmpty());
+	System.out.printf("Should be empty (true): %s%n", removeEverything.isEmpty());
 		
 		
         /**
@@ -239,7 +237,6 @@ class LinkedListDemo {
          System.out.println(aLinkedList);
          aLinkedList.set(1, "Hello");
          System.out.println(aLinkedList);
-
     }
 }
 
