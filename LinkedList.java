@@ -176,26 +176,69 @@ class LinkedListDemo {
         /**
          * 21. Retrieve but does not remove, the last element of a linked list.
          */
+         
+         System.out.printf("Last element from LinkedList: %s%n", aLinkedList.peekLast());
+         System.out.printf("Shouldn't have been removed: %s%n", aLinkedList);
 
         /**
          * 22. Check if a particular element exists in a linked list.
          */
-
+		System.out.printf("Does this contain \"newEl2\" ?: %s%n", aLinkedList.contains("newEl2"));
+		
         /**
          * 23. Convert a linked list to array list.
          */
-
+        LinkedList <String> linked_list = new LinkedList <String> ();
+        linked_list.add("Red");
+        linked_list.add("Green");
+        linked_list.add("Black");
+        linked_list.add("White");
+        linked_list.add("Pink");
+        System.out.println("Original linked list: " + linked_list);
+        
+		List<String> list = new ArrayList<String>(linked_list);
+		
+		Class cls2 = list.getClass();
+    	System.out.println("The type of the object is: " + cls2.getName());
+		
+		System.out.printf("LinkedList to an array: %s%n", list);
+		
         /**
          * 24. Compare two linked lists.
          */
+		LinkedList<String> c1= new LinkedList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+
+        LinkedList<String> c2= new LinkedList<String>();
+        c2.add("Red");
+        c2.add("Green");
+        c2.add("Black");
+        c2.add("Orange");
+
+        //comparison output in linked list
+        LinkedList<String> c3 = new LinkedList<String>();
+        for (String e : c1) {
+          c3.add(c2.contains(e) ? "Yes" : "No");
+          System.out.println(c3);         
+    	}
 
         /**
          * 25. Test an linked list is empty or not.
          */
-
+		System.out.printf("Shouldn't be empty (false): %s%n",aLinkedList.isEmpty());
+		System.out.printf("Should be empty (true): %s%n", removeEverything.isEmpty());
+		
+		
         /**
          * 26. Replace an element in a linked list.
          */
+         System.out.println(aLinkedList);
+         aLinkedList.set(1, "Hello");
+         System.out.println(aLinkedList);
 
     }
 }
