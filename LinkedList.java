@@ -87,7 +87,7 @@ class LinkedListDemo {
         System.out.println(aLinkedList);
 
         /**
-         * 10. get the first and last occurrence of the specified elements in a linked
+         * 10. Get the first and last occurrence of the specified elements in a linked
          * list.
          */
         String firstEl = aLinkedList.getFirst();
@@ -96,7 +96,7 @@ class LinkedListDemo {
         System.out.printf("Last index: %s%n", lastEl);
 
         /**
-         * 11. display the elements and their positions in a linked list.
+         * 11. Display the elements and their positions in a linked list.
          */
         for (int i = 0; i < aLinkedList.size(); i++) {
             System.out.println(i);
@@ -104,63 +104,97 @@ class LinkedListDemo {
         }
 
         /**
-         * 12. remove a specified element from a linked list.
+         * 12. Remove a specified element from a linked list.
          */
+        aLinkedList.remove(4);
 
         /**
-         * 13. remove first and last element from a linked list.
+         * 13. Remove first and last element from a linked list.
          */
+        System.out.printf("Before first and last element removed: %s%n", aLinkedList);
+        aLinkedList.removeFirst();
+        aLinkedList.removeLast();
+        System.out.printf("After first and last element removed: %s%n", aLinkedList);
 
         /**
-         * 14. remove all the elements from a linked list.
+         * 14. Remove all the elements from a linked list.
          */
+        LinkedList removeEverything = new LinkedList();
+        removeEverything.add("this");
+        removeEverything.add("that");
+        
+        System.out.println(removeEverything);
+        removeEverything.clear();
+        System.out.println(removeEverything);
 
         /**
          * 15. Write a Java program of swap two elements in an linked list.
          */
+        Collections.swap(aLinkedList, 4, 5);
+        System.out.println(aLinkedList);
 
         /**
-         * 16. shuffle the elements in a linked list.
+         * 16. Shuffle the elements in a linked list.
+         */
+        Collections.shuffle(aLinkedList);
+        System.out.println(aLinkedList);
+
+        /**
+         * 17. Join two linked lists.
+         */
+        LinkedList joinedLinkedList = new LinkedList();
+        LinkedList addAllThis = new LinkedList();
+        addAllThis.add("add-this");
+        addAllThis.add("add-that");
+        joinedLinkedList.addAll(aLinkedList);
+        joinedLinkedList.addAll(addAllThis);
+        System.out.println(joinedLinkedList);
+
+        /**
+         * 18. Clone an linked list to another linked list.
+         */
+        LinkedList clonedLinkList = new LinkedList(aLinkedList);
+        System.out.printf("Cloned: %s%n", clonedLinkList);
+        System.out.printf("Original: %s%n", aLinkedList);
+        
+        /**
+         * 19. Remove and return the first element of a linked list.
+         */
+        System.out.printf("Pop First: %s%n", aLinkedList);
+        String puhPuhPuhPopped = aLinkedList.pop();
+        System.out.println(puhPuhPuhPopped);
+        System.out.printf("Should have been removed: %s%n", aLinkedList);
+
+        /**
+         * 20. Retrieve but does not remove, the first element of a linked list.
+         */
+        System.out.printf("Peek First: %s%n", aLinkedList);
+        String puhPuhPuhPeek = aLinkedList.peek();
+        System.out.println(puhPuhPuhPeek);
+        System.out.printf("Should have not been removed: %s%n", aLinkedList);
+
+        /**
+         * 21. Retrieve but does not remove, the last element of a linked list.
          */
 
         /**
-         * 17. join two linked lists.
+         * 22. Check if a particular element exists in a linked list.
          */
 
         /**
-         * 18. clone an linked list to another linked list.
+         * 23. Convert a linked list to array list.
          */
 
         /**
-         * 19. remove and return the first element of a linked list.
+         * 24. Compare two linked lists.
          */
 
         /**
-         * 20. retrieve but does not remove, the first element of a linked list.
+         * 25. Test an linked list is empty or not.
          */
 
         /**
-         * 21. retrieve but does not remove, the last element of a linked list.
-         */
-
-        /**
-         * 22. check if a particular element exists in a linked list.
-         */
-
-        /**
-         * 23. convert a linked list to array list.
-         */
-
-        /**
-         * 24. compare two linked lists.
-         */
-
-        /**
-         * 25. test an linked list is empty or not.
-         */
-
-        /**
-         * 26. replace an element in a linked list.
+         * 26. Replace an element in a linked list.
          */
 
     }
